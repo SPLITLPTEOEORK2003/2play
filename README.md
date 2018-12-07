@@ -1,1 +1,3 @@
-# 2play
+worker: node bot.js
+
+
