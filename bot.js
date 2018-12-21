@@ -12,7 +12,7 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 client.on('ready', () => {
-  client.user.setGame('.كُلمآ خُذل الانسان احصبح قاسياً.','https://www.twitch.tv/peery13');
+  client.user.setGame('كلما خُذل آلانسان اصبح قأسياً.','https://www.twitch.tv/peery13');
 });
 client.on('ready', function() {
     console.log(`i am ready ${client.user.username}`);
@@ -384,7 +384,7 @@ function add_to_queue(strID) {
 
 function search_video(query, cb) {
 
-    request("https://www.googleapis.com/youtube/v3/search?part=id&type=video&q=" + encodeURIComponent(query) + ".key=" + yt_api_key, function(error, response, body) {
+    request("https://www.googleapis.com/youtube/v3/search?part=id&type=video&q=" + encodeURIComponent(query) + "&key=" + yt_api_key, function(error, response, body) {
 
         var json = JSON.parse(body);
 
@@ -431,37 +431,13 @@ function isYoutube(str) {
      معلومات البوت
      prefix = ${prefix}
      ping = ${Date.now() - message.createdTimestamp}ms
-     By - LexMasTeR  `)
+      `)
 
       message.channel.send({embed});
 
      }
 
     });
-
-                            
-                            
-                             client.on('message', message => {
-                                                                      if (message.content === ".inv") {
-                                                                          if(!message.channel.guild) return;
-                                                                      let embed = new Discord.RichEmbed()
-                                                                      .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-                                                                      .setTitle(`:small_orange_diamond: Invite Link `)
-                                                                      .setURL(`رابط اضافة البوت الي سيرفرك`)        
-                                                                   message.channel.sendEmbed(embed);
-                                                                     }
-                                                                 });  
-                          
-                                                                 client.on('message', message => {
-                                                                    if (message.content === "$support") {
-                                                                    let embed = new Discord.RichEmbed()
-                                                                 .setAuthor(message.author.username)
-                                                                 .setColor("#9B59B6")
-                                                                 .addField(" ** :gear: Server Support :gear: **" , "  **رابط سيرفرك**")
-                                                                    
-                                                                    
-                                                                 message.channel.sendEmbed(embed);
-                                                                   }
-                                                               });
+                           
 
 client.login(process.env.BOT_TOKEN);
