@@ -10,6 +10,7 @@ const prefix = '.';
 client.login(process.env.BOT_TOKEN); 
 client.on('ready', () => {
     console.log('I am ready!');
+  client.user.setStatus('idle')
 });
 client.on('ready', () => {
   client.user.setGame('كلما خُذل آلانسان اصبح قأسياً.','https://www.twitch.tv/peery13');
