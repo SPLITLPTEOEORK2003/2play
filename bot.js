@@ -424,14 +424,7 @@ function isYoutube(str) {
      **${prefix}leave**
      خروج البوت من الروم
      **${prefix}inv**
-     لدعوت البوت
-     **{prefix}support**
-     سيرفر الدعم
-     **{prefix}bot**
-     معلومات البوت
-     prefix = ${prefix}
-     ping = ${Date.now() - message.createdTimestamp}ms
-      `)
+    
 
       message.channel.send({embed});
 
